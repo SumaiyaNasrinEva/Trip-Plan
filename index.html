@@ -2,1245 +2,1392 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Our Trip 🌸</title>
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    min-height:100%;
+
+/* =========================
+   BODY
+========================= */
+
+html {
+    min-height: 100%;
 }
 
-body{
+body {
 
-    min-height:100vh;
-    min-height:100svh;
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:20px 12px;
+    min-height: 100vh;
 
     font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+        Georgia,
+        "Times New Roman",
+        serif;
 
     background:
-    linear-gradient(
-        135deg,
-        #d8c9d8,
-        #eddde5,
-        #d8c9dc
-    );
+        linear-gradient(
+            135deg,
+            #d9c9da,
+            #eedee7,
+            #d9c9dc
+        );
 
-    overflow-x:hidden;
+    overflow-x: hidden;
+
+    position: relative;
 }
 
 
-/* FLOATING FLOWERS */
+/* =========================
+   FLOATING FLOWERS
+========================= */
 
-.flower{
+.flower {
 
-    position:fixed;
+    position: fixed;
 
-    font-size:22px;
+    font-size: 24px;
 
-    opacity:.75;
+    opacity: .8;
 
-    pointer-events:none;
+    pointer-events: none;
+
+    z-index: 0;
 
     animation:
-    floating
-    5s
-    ease-in-out
-    infinite;
-
-    z-index:0;
+        floating
+        5s
+        ease-in-out
+        infinite;
 }
 
-.flower1{
-    top:15%;
-    left:22%;
+.flower1 {
+    top: 15%;
+    left: 22%;
 }
 
-.flower2{
-    top:27%;
-    right:20%;
-    animation-delay:1s;
+.flower2 {
+    top: 28%;
+    right: 20%;
+    animation-delay: 1s;
 }
 
-.flower3{
-    bottom:20%;
-    left:24%;
-    animation-delay:2s;
+.flower3 {
+    bottom: 20%;
+    left: 24%;
+    animation-delay: 2s;
 }
 
-.flower4{
-    bottom:30%;
-    right:25%;
-    animation-delay:3s;
+.flower4 {
+    bottom: 30%;
+    right: 25%;
+    animation-delay: 3s;
 }
 
 
-@keyframes floating{
+@keyframes floating {
 
-    0%{
+    0% {
         transform:
-        translateY(0)
-        rotate(0deg);
+            translateY(0)
+            rotate(0deg);
     }
 
-    50%{
+    50% {
         transform:
-        translateY(-15px)
-        rotate(20deg);
+            translateY(-15px)
+            rotate(20deg);
     }
 
-    100%{
+    100% {
         transform:
-        translateY(0)
-        rotate(0deg);
+            translateY(0)
+            rotate(0deg);
     }
 }
 
 
-/* APP */
+/* =========================
+   MAIN APP
+========================= */
 
-.app{
+.app {
 
-    width:100%;
+    width: 100%;
 
-    max-width:540px;
+    max-width: 540px;
 
-    position:relative;
+    min-height: 100vh;
 
-    z-index:1;
+    margin: 0 auto;
+
+    padding:
+        30px
+        12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 1;
 }
 
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 
-.card{
+.card {
 
-    width:100%;
+    width: 100%;
 
-    padding:32px 40px;
+    padding:
+        32px
+        40px;
 
     background:
-    rgba(
-        255,
-        255,
-        255,
-        .92
-    );
+        rgba(
+            255,
+            255,
+            255,
+            .94
+        );
 
-    border-radius:20px;
+    border-radius: 20px;
 
     box-shadow:
-    0 25px 60px
-    rgba(
-        90,
-        50,
-        90,
-        .18
-    );
+        0 25px 60px
+        rgba(
+            90,
+            50,
+            90,
+            .18
+        );
 
-    text-align:center;
+    text-align: center;
 
-    display:none;
-
-    animation:
-    pageIn
-    .6s
-    ease;
-}
-
-.card.active{
-    display:block;
-}
-
-
-@keyframes pageIn{
-
-    from{
-
-        opacity:0;
-
-        transform:
-        translateY(25px)
-        scale(.92);
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-        translateY(0)
-        scale(1);
-    }
-}
-
-
-/* ICON */
-
-.main-icon{
-
-    font-size:68px;
-
-    margin-bottom:16px;
+    display: none;
 
     animation:
-    bounce
-    2s
-    ease-in-out
-    infinite;
+        pageIn
+        .5s
+        ease;
+}
+
+.card.active {
+    display: block;
 }
 
 
-@keyframes bounce{
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(.95);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.main-icon {
+
+    font-size: 68px;
+
+    margin-bottom: 15px;
+
+    line-height: 1.2;
+
+    animation:
+        bounce
+        2s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes bounce {
 
     0%,
-    100%{
+    100% {
         transform:
-        translateY(0);
+            translateY(0);
     }
 
-    50%{
+    50% {
         transform:
-        translateY(-9px);
+            translateY(-8px);
     }
 }
 
 
-/* TEXT */
+/* =========================
+   TEXT
+========================= */
 
-h1{
+h1 {
 
-    color:#733d55;
+    color: #733d55;
 
-    font-size:27px;
+    font-size: 28px;
 
-    line-height:1.35;
+    line-height: 1.35;
 
-    margin-bottom:14px;
+    margin-bottom: 14px;
 }
 
-p{
+p {
 
-    color:#806271;
+    color: #806271;
 
-    font-size:16px;
+    font-size: 16px;
 
-    line-height:1.6;
-}
-
-
-/* BUTTON */
-
-button{
-
-    border:none;
-
-    cursor:pointer;
-
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-    transition:
-    all
-    .3s
-    ease;
+    line-height: 1.6;
 }
 
 
-/* FIRST PAGE BUTTONS */
+/* =========================
+   BUTTON GROUP
+========================= */
 
-.button-group{
+.button-group {
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
 
-    gap:15px;
+    align-items: center;
 
-    margin-top:28px;
+    gap: 15px;
+
+    margin-top: 28px;
 }
 
 
 .yes-btn,
-.no-btn{
+.no-btn {
+
+    min-width: 120px;
 
     padding:
-    12px
-    30px;
+        13px
+        25px;
 
-    border-radius:30px;
+    border: none;
 
-    color:white;
+    border-radius: 30px;
 
-    font-size:15px;
+    color: white;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        .3s ease;
 }
 
 
-.yes-btn{
-    background:#df86a8;
+.yes-btn {
+    background: #df86a8;
 }
 
-.no-btn{
-    background:#9d6cc3;
+.no-btn {
+    background: #9d6cc3;
 }
 
 
 .yes-btn:hover,
-.no-btn:hover{
+.no-btn:hover {
 
     transform:
-    scale(1.08);
+        scale(1.08);
 }
 
 
-/* DESTINATION */
+/* =========================
+   DESTINATION GRID
+========================= */
 
-.destination-grid{
+.destination-grid {
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-    repeat(
-        2,
-        minmax(
-            0,
-            1fr
-        )
-    );
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
 
-    gap:12px;
+    gap: 12px;
 
-    margin-top:22px;
+    margin-top: 22px;
 }
 
 
-.destination{
+.destination {
 
-    min-height:150px;
+    width: 100%;
 
-    padding:0;
+    min-height: 150px;
 
-    overflow:hidden;
+    padding: 0;
 
-    border-radius:14px;
+    overflow: hidden;
 
-    background:#f5e5ed;
+    border: none;
 
-    color:#704457;
+    border-radius: 14px;
 
-    font-size:14px;
+    background: #f5e5ed;
+
+    color: #704457;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        .3s ease;
 }
 
 
-.destination img{
+.destination img {
 
-    width:100%;
+    width: 100%;
 
-    height:95px;
+    height: 95px;
 
-    display:block;
+    display: block;
 
-    object-fit:cover;
+    object-fit: cover;
 }
 
 
-.destination span{
+.destination span {
 
-    display:block;
+    display: block;
 
-    padding:10px 5px;
+    padding: 10px 5px;
 
-    font-size:14px;
+    font-size: 14px;
 }
 
 
-.destination:hover{
-
-    background:#e39ab5;
-
-    color:white;
+.destination:hover {
 
     transform:
-    translateY(-3px);
+        translateY(-4px);
+
+    background: #e39ab5;
+
+    color: white;
 }
 
 
-.destination.selected{
+.destination.selected {
 
-    background:#df86a8;
+    background: #df86a8;
 
-    color:white;
+    color: white;
 
     box-shadow:
-    0 6px 15px
-    rgba(
-        200,
-        100,
-        140,
-        .25
-    );
+        0 6px 15px
+        rgba(
+            200,
+            100,
+            140,
+            .3
+        );
 }
 
 
-/* AMOUNT */
+/* =========================
+   AMOUNT BOX
+========================= */
 
-.amount-card{
+.amount-card {
 
-    margin-top:16px;
+    margin-top: 16px;
 
-    padding:14px 16px;
-
-    border-radius:15px;
-
-    background:#fff1f6;
+    padding:
+        14px
+        16px;
 
     border:
-    1px
-    dashed
-    #df86a8;
+        1px
+        dashed
+        #df86a8;
+
+    border-radius: 15px;
+
+    background: #fff1f6;
 }
 
 
-.amount-label{
+.amount-label {
 
-    font-size:13px;
+    color: #8b6272;
 
-    color:#8b6272;
+    font-size: 13px;
 }
 
 
-.amount{
+.amount {
 
-    margin-top:2px;
+    margin-top: 3px;
 
-    font-size:32px;
+    color: #d56d96;
 
-    font-weight:bold;
+    font-size: 32px;
 
-    color:#d56d96;
+    font-weight: bold;
 }
 
 
-.cost-message{
+.cost-message {
 
-    margin-top:6px;
+    margin-top: 6px;
 
-    font-size:12px;
+    color: #8b6272;
 
-    line-height:1.5;
+    font-size: 12px;
 
-    color:#8b6272;
+    line-height: 1.5;
 }
 
 
-/* MAIN BUTTON */
+/* =========================
+   MAIN BUTTON
+========================= */
 
-.main-btn{
+.main-btn {
 
-    width:100%;
+    width: 100%;
 
-    height:44px;
+    height: 46px;
 
-    margin-top:16px;
+    margin-top: 18px;
 
-    border-radius:30px;
+    border: none;
 
-    background:#df86a8;
+    border-radius: 30px;
 
-    color:white;
+    background: #df86a8;
 
-    font-size:15px;
+    color: white;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        .3s ease;
 }
 
 
-.main-btn:hover{
+.main-btn:hover {
 
-    background:#ce7195;
+    background: #ce7195;
 
     transform:
-    translateY(-2px);
+        translateY(-2px);
 }
 
 
-/* FORM */
+/* =========================
+   FORM
+========================= */
 
-.form-group{
+.form-group {
 
-    text-align:left;
+    text-align: left;
 
-    margin-top:18px;
+    margin-top: 20px;
 }
 
 
-label{
+label {
 
-    display:block;
+    display: block;
 
-    margin-bottom:7px;
+    margin-bottom: 8px;
 
-    color:#704457;
+    color: #704457;
 
-    font-size:14px;
+    font-size: 16px;
 
-    font-weight:bold;
+    font-weight: bold;
 }
 
 
 input,
-select{
+select {
 
-    width:100%;
+    width: 100%;
 
-    height:42px;
+    height: 48px;
 
     padding:
-    0
-    12px;
+        0
+        14px;
 
     border:
-    1px
-    solid
-    #cdbbc5;
+        1px
+        solid
+        #cdbbc5;
 
-    border-radius:8px;
+    border-radius: 10px;
 
-    outline:none;
+    outline: none;
 
-    color:#704457;
+    background: white;
 
-    background:white;
+    color: #704457;
 
     font-family:
-    Georgia,
-    serif;
+        Georgia,
+        serif;
 
-    font-size:16px;
+    font-size: 16px;
 }
 
 
 input:focus,
-select:focus{
+select:focus {
 
-    border-color:#df86a8;
+    border-color: #df86a8;
 }
 
 
-/* FINAL PAGE */
+/* =========================
+   FINAL PAGE
+========================= */
 
-.success-icon{
+.success-icon {
 
-    font-size:75px;
+    font-size: 72px;
 
-    margin-bottom:15px;
+    margin-bottom: 15px;
 
     animation:
-    heartBeat
-    1.5s
-    infinite;
+        heartBeat
+        1.5s
+        infinite;
 }
 
 
-@keyframes heartBeat{
+@keyframes heartBeat {
 
     0%,
-    100%{
-        transform:scale(1);
+    100% {
+        transform:
+            scale(1);
     }
 
-    50%{
-        transform:scale(1.15);
+    50% {
+        transform:
+            scale(1.12);
     }
 }
 
 
-.summary{
+.summary {
 
-    margin-top:20px;
+    margin-top: 20px;
 
-    padding:18px;
+    padding: 18px;
 
-    border-radius:15px;
+    border-radius: 15px;
 
-    background:#f8e9ef;
+    background: #f8e9ef;
 
-    color:#704457;
+    color: #704457;
 
-    line-height:2;
+    line-height: 2;
 
-    text-align:left;
+    text-align: left;
 }
 
 
-.summary strong{
-    color:#9b5575;
+.summary strong {
+
+    color: #9b5575;
 }
 
 
-.restart-btn{
+.restart-btn {
 
-    width:100%;
+    width: 100%;
 
-    height:43px;
+    height: 45px;
 
-    margin-top:22px;
+    margin-top: 22px;
 
-    border-radius:25px;
+    border: none;
 
-    background:#df86a8;
+    border-radius: 25px;
 
-    color:white;
+    background: #df86a8;
 
-    font-size:15px;
+    color: white;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
 }
 
 
-/* MOBILE RESPONSIVE */
+/* =================================================
+   MOBILE RESPONSIVE
+================================================= */
 
-@media (max-width:600px){
+@media (max-width: 600px) {
 
-    body{
+    body {
 
         /*
-        IMPORTANT FIX:
-        flex-start বাদ দিয়ে
-        center রাখা হয়েছে
+        এখানে flex center ব্যবহার করা হয়নি।
+        তাই mobile browser-এর address bar
+        card-কে উপরে ঠেলে দেবে না।
         */
 
-        align-items:center;
+        min-height: 100vh;
+    }
+
+
+    .app {
+
+        width: 100%;
+
+        min-height: 100vh;
 
         padding:
-        20px
-        12px;
+            70px
+            12px
+            50px;
 
-        /*
-        Mobile browser-এর
-        address bar-এর জন্য
-        safe viewport height
-        */
-
-        min-height:100svh;
+        display: block;
     }
 
 
-    .app{
+    .card {
 
-        width:100%;
+        width: 100%;
+
+        padding:
+            28px
+            18px;
 
         margin:
-        auto;
-    }
-
-
-    .card{
-
-        padding:
-        28px
-        18px;
+            0
+            auto;
 
         /*
-        mobile-এ card
-        screen-এর বাইরে যাবে না
+        ছোট screen হলে
+        card-এর ভেতরে scroll হবে
         */
 
         max-height:
-        calc(
-            100svh
-            -
-            40px
-        );
+            calc(
+                100vh
+                -
+                100px
+            );
 
-        overflow-y:auto;
+        overflow-y: auto;
     }
 
 
-    .main-icon{
+    .main-icon {
 
-        font-size:55px;
+        font-size: 54px;
 
-        margin-bottom:12px;
+        margin-bottom: 12px;
     }
 
 
-    h1{
+    h1 {
 
-        font-size:22px;
+        font-size: 23px;
 
-        line-height:1.35;
+        line-height: 1.35;
     }
 
 
-    p{
+    p {
 
-        font-size:14px;
+        font-size: 15px;
     }
 
 
-    .destination-grid{
+    .button-group {
 
-        gap:9px;
-    }
-
-
-    .destination{
-
-        min-height:140px;
-    }
-
-
-    .destination img{
-
-        height:85px;
-    }
-
-
-    .destination span{
-
-        font-size:13px;
-    }
-
-
-    .amount{
-
-        font-size:30px;
-    }
-
-
-    .cost-message{
-
-        font-size:11px;
-    }
-}
-
-
-/* SMALL MOBILE */
-
-@media (max-width:380px){
-
-    .card{
-
-        padding:
-        24px
-        15px;
-    }
-
-
-    .main-icon{
-
-        font-size:48px;
-    }
-
-
-    h1{
-
-        font-size:20px;
-    }
-
-
-    .destination-grid{
-
-        grid-template-columns:1fr;
-    }
-
-
-    .button-group{
-
-        gap:10px;
+        gap: 10px;
     }
 
 
     .yes-btn,
-    .no-btn{
+    .no-btn {
+
+        min-width: 110px;
 
         padding:
-        11px
-        22px;
+            12px
+            20px;
+
+        font-size: 15px;
+    }
+
+
+    .destination-grid {
+
+        gap: 9px;
+    }
+
+
+    .destination {
+
+        min-height: 140px;
+    }
+
+
+    .destination img {
+
+        height: 85px;
+    }
+
+
+    .destination span {
+
+        font-size: 13px;
+    }
+
+
+    .amount {
+
+        font-size: 30px;
+    }
+
+
+    .cost-message {
+
+        font-size: 11px;
+    }
+}
+
+
+/* =================================================
+   SMALL PHONE
+================================================= */
+
+@media (max-width: 380px) {
+
+    .app {
+
+        padding:
+            55px
+            10px
+            40px;
+    }
+
+
+    .card {
+
+        padding:
+            24px
+            14px;
+    }
+
+
+    .main-icon {
+
+        font-size: 48px;
+    }
+
+
+    h1 {
+
+        font-size: 21px;
+    }
+
+
+    p {
+
+        font-size: 14px;
+    }
+
+
+    .destination-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .button-group {
+
+        gap: 8px;
+    }
+
+
+    .yes-btn,
+    .no-btn {
+
+        min-width: 100px;
+
+        padding:
+            11px
+            15px;
     }
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<div class="flower flower1">
-🌸
-</div>
+<!-- FLOATING FLOWERS -->
 
+<div class="flower flower1">🌸</div>
 
-<div class="flower flower2">
-🌼
-</div>
+<div class="flower flower2">🌼</div>
 
+<div class="flower flower3">🌷</div>
 
-<div class="flower flower3">
-🌷
-</div>
-
-
-<div class="flower flower4">
-🌸
-</div>
+<div class="flower flower4">🌸</div>
 
 
 <main class="app">
 
 
-<!-- PAGE 1 -->
+<!-- =========================
+     PAGE 1
+========================= -->
 
 <section
-class="card page active"
-id="page1">
+    class="card page active"
+    id="page1">
 
 
-<div class="main-icon">
-👻🧳🚌🌸
-</div>
+    <div class="main-icon">
+        👻🧳🚌🌸
+    </div>
 
 
-<h1>
+    <h1>
 
-🌸 Are you ready for a trip
+        🌸 Are you ready for a trip
 
-<br>
+        <br>
 
-with us? 🌸
+        with us? 🌸
 
-</h1>
-
-
-<p>
-
-Let's make some unforgettable
-
-memories together! 🥰
-
-</p>
+    </h1>
 
 
-<div class="button-group">
+    <p>
+
+        Let's make some unforgettable
+
+        memories together! 🥰
+
+    </p>
 
 
-<button
-class="yes-btn"
-onclick="showPage(2)">
-
-YES! 💗
-
-</button>
+    <div class="button-group">
 
 
-<button
-class="no-btn"
-id="noButton">
+        <button
+            class="yes-btn"
+            onclick="showPage(2)">
 
-NO 😭
+            YES! 💗
 
-</button>
+        </button>
 
 
-</div>
+        <button
+            class="no-btn"
+            id="noButton">
+
+            NO 😭
+
+        </button>
+
+
+    </div>
 
 
 </section>
 
 
-<!-- PAGE 2 -->
+<!-- =========================
+     PAGE 2
+========================= -->
 
 <section
-class="card page"
-id="page2">
+    class="card page"
+    id="page2">
 
 
-<div class="main-icon">
-🗺️🌍
-</div>
+    <div class="main-icon">
+        🗺️🌍
+    </div>
 
 
-<h1>
-Where should we go?
-</h1>
+    <h1>
+        Where should we go?
+    </h1>
 
 
-<p>
-Choose our next adventure ✨
-</p>
+    <p>
+        Choose our next adventure ✨
+    </p>
 
 
-<div class="destination-grid">
+    <div class="destination-grid">
 
 
-<button
-class="destination"
-onclick="selectDestination(this,'Jinda Park',500)">
+        <button
+            class="destination"
+            onclick="
+                selectDestination(
+                    this,
+                    'Jinda Park',
+                    500
+                )
+            ">
 
 
-<img
-src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80"
-alt="Jinda Park">
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80"
+                alt="Jinda Park">
 
 
-<span>
-🌳 Jinda Park
-</span>
+            <span>
+                🌳 Jinda Park
+            </span>
 
 
-</button>
+        </button>
 
 
-<button
-class="destination"
-onclick="selectDestination(this,'Botanical Garden',500)">
+        <button
+            class="destination"
+            onclick="
+                selectDestination(
+                    this,
+                    'Botanical Garden',
+                    500
+                )
+            ">
 
 
-<img
-src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80"
-alt="Botanical Garden">
+            <img
+                src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80"
+                alt="Botanical Garden">
 
 
-<span>
-🌿 Botanical Garden
-</span>
+            <span>
+                🌿 Botanical Garden
+            </span>
 
 
-</button>
+        </button>
 
 
-<button
-class="destination"
-onclick="selectDestination(this,'Ramna Park',500)">
+        <button
+            class="destination"
+            onclick="
+                selectDestination(
+                    this,
+                    'Ramna Park',
+                    500
+                )
+            ">
 
 
-<img
-src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=600&q=80"
-alt="Ramna Park">
+            <img
+                src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=600&q=80"
+                alt="Ramna Park">
 
 
-<span>
-🌸 Ramna Park
-</span>
+            <span>
+                🌸 Ramna Park
+            </span>
 
 
-</button>
+        </button>
 
 
-<button
-class="destination"
-onclick="selectDestination(this,'Hatir Jheel',500)">
+        <button
+            class="destination"
+            onclick="
+                selectDestination(
+                    this,
+                    'Hatir Jheel',
+                    500
+                )
+            ">
 
 
-<img
-src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
-alt="Hatir Jheel">
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
+                alt="Hatir Jheel">
 
 
-<span>
-🌃 Hatir Jheel
-</span>
+            <span>
+                🌃 Hatir Jheel
+            </span>
 
 
-</button>
+        </button>
 
 
-<button
-class="destination"
-onclick="selectDestination(this,'Sahabuddin Park',500)">
+        <button
+            class="destination"
+            onclick="
+                selectDestination(
+                    this,
+                    'Sahabuddin Park',
+                    500
+                )
+            ">
 
 
-<img
-src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
-alt="Sahabuddin Park">
+            <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
+                alt="Sahabuddin Park">
 
 
-<span>
-🌳 Sahabuddin Park
-</span>
+            <span>
+                🌳 Sahabuddin Park
+            </span>
 
 
-</button>
+        </button>
 
 
-</div>
+    </div>
 
 
-<div
-class="amount-card"
-id="amountCard"
-style="display:none;">
+    <div
+        class="amount-card"
+        id="amountCard"
+        style="display:none;">
 
 
-<div class="amount-label">
-Estimated trip cost 💰
-</div>
+        <div class="amount-label">
 
+            Estimated trip cost 💰
 
-<div
-class="amount"
-id="destinationAmount">
+        </div>
 
-৳0
 
-</div>
+        <div
+            class="amount"
+            id="destinationAmount">
 
+            ৳0
 
-<p class="cost-message">
+        </div>
 
-This is the estimated cost for our trip.
 
-<br>
+        <p class="cost-message">
 
-So please bring around this amount with you! 🥰✨
+            This is the estimated cost for our trip.
 
-</p>
+            <br>
 
+            So please bring around this amount with you! 🥰✨
 
-</div>
+        </p>
 
 
-<button
-class="main-btn"
-onclick="goToDatePage()">
+    </div>
 
-Continue →
 
-</button>
+    <button
+        class="main-btn"
+        onclick="goToDatePage()">
+
+        Continue →
+
+    </button>
 
 
 </section>
 
 
-<!-- PAGE 3 -->
+<!-- =========================
+     PAGE 3
+========================= -->
 
 <section
-class="card page"
-id="page3">
+    class="card page"
+    id="page3">
 
 
-<div class="main-icon">
-📅⏰
-</div>
+    <div class="main-icon">
+        📅⏰
+    </div>
 
 
-<h1>
-When are we going?
-</h1>
+    <h1>
+        When are we going?
+    </h1>
 
 
-<p>
-Pick a date and time for our adventure ✨
-</p>
+    <p>
+        Pick a date and time for our adventure ✨
+    </p>
 
 
-<div class="form-group">
+    <div class="form-group">
 
 
-<label>
-Pick a date 📅
-</label>
+        <label>
+            Pick a date 📅
+        </label>
 
 
-<input
-type="date"
-id="dateInput">
+        <input
+            type="date"
+            id="dateInput">
 
 
-</div>
+    </div>
 
 
-<div class="form-group">
+    <div class="form-group">
 
 
-<label>
-Choose a time ⏰
-</label>
+        <label>
+            Choose a time ⏰
+        </label>
 
 
-<select
-id="timeInput">
+        <select
+            id="timeInput">
 
 
-<option value="">
-Select a time
-</option>
+            <option value="">
+                Select a time
+            </option>
 
 
-<option>
-7:00 AM
-</option>
+            <option>
+                7:00 AM
+            </option>
 
 
-<option>
-8:00 AM
-</option>
+            <option>
+                8:00 AM
+            </option>
 
 
-<option>
-9:00 AM
-</option>
+            <option>
+                9:00 AM
+            </option>
 
 
-<option>
-10:00 AM
-</option>
+            <option>
+                10:00 AM
+            </option>
 
 
-<option>
-11:00 AM
-</option>
+            <option>
+                11:00 AM
+            </option>
 
 
-<option>
-12:00 PM
-</option>
+            <option>
+                12:00 PM
+            </option>
 
 
-<option>
-2:00 PM
-</option>
+            <option>
+                2:00 PM
+            </option>
 
 
-<option>
-4:00 PM
-</option>
+            <option>
+                4:00 PM
+            </option>
 
 
-<option>
-5:00 PM
-</option>
+            <option>
+                5:00 PM
+            </option>
 
 
-<option>
-6:00 PM
-</option>
+            <option>
+                6:00 PM
+            </option>
 
 
-<option>
-7:00 PM
-</option>
+            <option>
+                7:00 PM
+            </option>
 
 
-</select>
+        </select>
 
 
-</div>
+    </div>
 
 
-<button
-class="main-btn"
-onclick="confirmDate()">
+    <button
+        class="main-btn"
+        onclick="confirmDate()">
 
-Continue 💗
+        Continue 💗
 
-</button>
+    </button>
 
 
 </section>
 
 
-<!-- PAGE 4 -->
+<!-- =========================
+     PAGE 4
+========================= -->
 
 <section
-class="card page"
-id="page4">
+    class="card page"
+    id="page4">
 
 
-<div class="success-icon">
-🎉🚌🎉
-</div>
+    <div class="success-icon">
+        🎉🚌🎉
+    </div>
 
 
-<h1>
-TRIP CONFIRMED! 💗
-</h1>
+    <h1>
+        TRIP CONFIRMED! 💗
+    </h1>
 
 
-<p>
-Let's make unforgettable memories together! 🥰✨
-</p>
+    <p>
+
+        Let's make unforgettable memories together! 🥰✨
+
+    </p>
 
 
-<div class="summary">
+    <div class="summary">
 
 
-📍 Destination:
+        📍 Destination:
 
-<strong
-id="finalDestination">
-</strong>
+        <strong
+            id="finalDestination">
 
-
-<br>
+        </strong>
 
 
-📅 Date:
-
-<strong
-id="finalDate">
-</strong>
+        <br>
 
 
-<br>
+        📅 Date:
+
+        <strong
+            id="finalDate">
+
+        </strong>
 
 
-⏰ Time:
-
-<strong
-id="finalTime">
-</strong>
+        <br>
 
 
-<br>
+        ⏰ Time:
+
+        <strong
+            id="finalTime">
+
+        </strong>
 
 
-💰 Estimated Cost:
-
-<strong
-id="finalAmount">
-</strong>
+        <br>
 
 
-<br>
+        💰 Estimated Cost:
+
+        <strong
+            id="finalAmount">
+
+        </strong>
 
 
-🎒 Remember to bring around this amount with you!
+        <br>
 
 
-</div>
+        🎒 Remember to bring around this amount with you!
 
 
-<button
-class="restart-btn"
-onclick="location.reload()">
+    </div>
 
-Plan Another Trip 🔄
 
-</button>
+    <button
+        class="restart-btn"
+        onclick="location.reload()">
+
+        Plan Another Trip 🔄
+
+    </button>
 
 
 </section>
@@ -1252,102 +1399,156 @@ Plan Another Trip 🔄
 <script>
 
 
-let selectedDestination="";
+/* =========================
+   VARIABLES
+========================= */
 
-let selectedAmount=0;
+let selectedDestination = "";
 
-let selectedDate="";
+let selectedAmount = 0;
 
-let selectedTime="";
+let selectedDate = "";
+
+let selectedTime = "";
 
 
-function showPage(pageNumber){
+/* =========================
+   PAGE CHANGE
+========================= */
 
-    const pages=
-    document.querySelectorAll(".page");
+function showPage(pageNumber) {
 
-    pages.forEach(function(page){
 
-        page.classList.remove("active");
+    const pages =
+        document.querySelectorAll(
+            ".page"
+        );
 
-    });
+
+    pages.forEach(
+        function(page) {
+
+            page.classList.remove(
+                "active"
+            );
+
+        }
+    );
 
 
     document
-    .getElementById(
-        "page"+pageNumber
-    )
-    .classList.add("active");
+        .getElementById(
+            "page" + pageNumber
+        )
+        .classList.add(
+            "active"
+        );
+
+
+    /*
+    নতুন page দেখানোর সময়
+    card-এর top position
+    আবার ঠিক রাখা
+    */
+
+    window.scrollTo(
+        0,
+        0
+    );
 
 }
 
 
-const noButton=
-document.getElementById("noButton");
+/* =========================
+   NO BUTTON
+========================= */
 
-
-noButton.addEventListener(
-"mouseover",
-function(){
-
-    const maxX=
-    window.innerWidth
-    -
-    noButton.offsetWidth
-    -
-    20;
-
-
-    const maxY=
-    window.innerHeight
-    -
-    noButton.offsetHeight
-    -
-    20;
-
-
-    const randomX=
-    Math.random()
-    *
-    Math.max(100,maxX);
-
-
-    const randomY=
-    Math.random()
-    *
-    Math.max(100,maxY);
-
-
-    noButton.style.position="fixed";
-
-    noButton.style.left=
-    randomX+"px";
-
-    noButton.style.top=
-    randomY+"px";
-
-});
-
-
-function selectDestination(
-button,
-destination,
-amount
-){
-
-    const buttons=
-    document.querySelectorAll(
-        ".destination"
+const noButton =
+    document.getElementById(
+        "noButton"
     );
 
 
-    buttons.forEach(function(btn){
+noButton.addEventListener(
+    "mouseover",
+    function() {
 
-        btn.classList.remove(
-            "selected"
+
+        const maxX =
+            window.innerWidth
+            -
+            noButton.offsetWidth
+            -
+            20;
+
+
+        const maxY =
+            window.innerHeight
+            -
+            noButton.offsetHeight
+            -
+            20;
+
+
+        const randomX =
+            Math.random()
+            *
+            Math.max(
+                100,
+                maxX
+            );
+
+
+        const randomY =
+            Math.random()
+            *
+            Math.max(
+                100,
+                maxY
+            );
+
+
+        noButton.style.position =
+            "fixed";
+
+
+        noButton.style.left =
+            randomX + "px";
+
+
+        noButton.style.top =
+            randomY + "px";
+
+    }
+);
+
+
+/* =========================
+   DESTINATION SELECT
+========================= */
+
+function selectDestination(
+    button,
+    destination,
+    amount
+) {
+
+
+    const buttons =
+        document.querySelectorAll(
+            ".destination"
         );
 
-    });
+
+    buttons.forEach(
+        function(btn) {
+
+            btn.classList.remove(
+                "selected"
+            );
+
+        }
+    );
 
 
     button.classList.add(
@@ -1355,44 +1556,51 @@ amount
     );
 
 
-    selectedDestination=
-    destination;
+    selectedDestination =
+        destination;
 
 
-    selectedAmount=
-    amount;
-
-
-    document
-    .getElementById(
-        "destinationAmount"
-    )
-    .innerText=
-    "৳"+amount;
+    selectedAmount =
+        amount;
 
 
     document
-    .getElementById(
-        "amountCard"
-    )
-    .style.display=
-    "block";
+        .getElementById(
+            "destinationAmount"
+        )
+        .innerText =
+        "৳" + amount;
+
+
+    document
+        .getElementById(
+            "amountCard"
+        )
+        .style.display =
+        "block";
 
 }
 
 
-function goToDatePage(){
+/* =========================
+   GO TO DATE PAGE
+========================= */
 
-    if(
-        selectedDestination===
-        ""
-    ){
+function goToDatePage() {
+
+
+    if (
+        selectedDestination === ""
+    ) {
+
 
         alert(
             "Please select a destination first 🗺️"
         );
 
+
         return;
+
     }
 
 
@@ -1401,102 +1609,111 @@ function goToDatePage(){
 }
 
 
-function confirmDate(){
+/* =========================
+   CONFIRM DATE
+========================= */
 
-    const dateInput=
-    document.getElementById(
-        "dateInput"
-    );
-
-
-    const timeInput=
-    document.getElementById(
-        "timeInput"
-    );
+function confirmDate() {
 
 
-    if(
-        dateInput.value===
-        ""
-    ){
+    const dateInput =
+        document.getElementById(
+            "dateInput"
+        );
+
+
+    const timeInput =
+        document.getElementById(
+            "timeInput"
+        );
+
+
+    if (
+        dateInput.value === ""
+    ) {
+
 
         alert(
             "Please select a date 📅"
         );
 
+
         return;
+
     }
 
 
-    if(
-        timeInput.value===
-        ""
-    ){
+    if (
+        timeInput.value === ""
+    ) {
+
 
         alert(
             "Please select a time ⏰"
         );
 
+
         return;
+
     }
 
 
-    selectedDate=
-    dateInput.value;
+    selectedDate =
+        dateInput.value;
 
 
-    selectedTime=
-    timeInput.value;
+    selectedTime =
+        timeInput.value;
 
 
-    const dateObject=
-    new Date(
-        selectedDate
-    );
+    const dateObject =
+        new Date(
+            selectedDate
+        );
 
 
-    const formattedDate=
-    dateObject.toLocaleDateString(
-        "en-US",
-        {
-            weekday:"long",
-            year:"numeric",
-            month:"long",
-            day:"numeric"
-        }
-    );
-
-
-    document
-    .getElementById(
-        "finalDestination"
-    )
-    .innerText=
-    selectedDestination;
+    const formattedDate =
+        dateObject.toLocaleDateString(
+            "en-US",
+            {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            }
+        );
 
 
     document
-    .getElementById(
-        "finalDate"
-    )
-    .innerText=
-    formattedDate;
+        .getElementById(
+            "finalDestination"
+        )
+        .innerText =
+        selectedDestination;
 
 
     document
-    .getElementById(
-        "finalTime"
-    )
-    .innerText=
-    selectedTime;
+        .getElementById(
+            "finalDate"
+        )
+        .innerText =
+        formattedDate;
 
 
     document
-    .getElementById(
-        "finalAmount"
-    )
-    .innerText=
-    "৳"+selectedAmount;
+        .getElementById(
+            "finalTime"
+        )
+        .innerText =
+        selectedTime;
+
+
+    document
+        .getElementById(
+            "finalAmount"
+        )
+        .innerText =
+        "৳" + selectedAmount;
 
 
     showPage(4);
