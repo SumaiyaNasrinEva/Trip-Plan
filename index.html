@@ -2,1725 +2,2001 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Our Trip 🌸</title>
+    <meta charset="UTF-8">
 
-<style>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-/* =========================
-   RESET
-========================= */
+    <title>Our Trip 🌸</title>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+    <style>
 
-/* =========================
-   BODY
-========================= */
+        * {
 
-html {
-    min-height: 100%;
-}
+            margin: 0;
 
-body {
+            padding: 0;
 
-    min-height: 100vh;
+            box-sizing: border-box;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+        }
 
-    background:
-        linear-gradient(
-            135deg,
-            #d9c9da,
-            #eedee7,
-            #d9c9dc
-        );
 
-    overflow-x: hidden;
+        body {
 
-    position: relative;
-}
+            min-height: 100vh;
 
+            display: flex;
 
-/* =========================
-   FLOATING FLOWERS
-========================= */
+            justify-content: center;
 
-.flower {
+            align-items: center;
 
-    position: fixed;
+            padding: 20px;
 
-    font-size: 24px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-    opacity: .8;
+            background:
+                linear-gradient(
+                    135deg,
+                    #d8c9d8,
+                    #eddde5,
+                    #d8c9dc
+                );
 
-    pointer-events: none;
+            overflow-x: hidden;
 
-    z-index: 0;
+        }
 
-    animation:
-        floating
-        5s
-        ease-in-out
-        infinite;
-}
 
-.flower1 {
-    top: 15%;
-    left: 22%;
-}
+        .flower {
 
-.flower2 {
-    top: 28%;
-    right: 20%;
-    animation-delay: 1s;
-}
+            position: fixed;
 
-.flower3 {
-    bottom: 20%;
-    left: 24%;
-    animation-delay: 2s;
-}
+            font-size: 22px;
 
-.flower4 {
-    bottom: 30%;
-    right: 25%;
-    animation-delay: 3s;
-}
+            opacity: 0.75;
 
+            pointer-events: none;
 
-@keyframes floating {
+            animation:
+                floating
+                5s
+                ease-in-out
+                infinite;
 
-    0% {
-        transform:
-            translateY(0)
-            rotate(0deg);
-    }
+        }
 
-    50% {
-        transform:
-            translateY(-15px)
-            rotate(20deg);
-    }
 
-    100% {
-        transform:
-            translateY(0)
-            rotate(0deg);
-    }
-}
+        .flower1 {
 
+            top: 15%;
 
-/* =========================
-   MAIN APP
-========================= */
+            left: 22%;
 
-.app {
+        }
 
-    width: 100%;
 
-    max-width: 540px;
+        .flower2 {
 
-    min-height: 100vh;
+            top: 27%;
 
-    margin: 0 auto;
+            right: 20%;
 
-    padding:
-        30px
-        12px;
+            animation-delay: 1s;
 
-    display: flex;
+        }
 
-    align-items: center;
 
-    justify-content: center;
+        .flower3 {
 
-    position: relative;
+            bottom: 20%;
 
-    z-index: 1;
-}
+            left: 24%;
 
+            animation-delay: 2s;
 
-/* =========================
-   CARD
-========================= */
+        }
 
-.card {
 
-    width: 100%;
+        .flower4 {
 
-    padding:
-        32px
-        40px;
+            bottom: 30%;
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            .94
-        );
+            right: 25%;
 
-    border-radius: 20px;
+            animation-delay: 3s;
 
-    box-shadow:
-        0 25px 60px
-        rgba(
-            90,
-            50,
-            90,
-            .18
-        );
+        }
 
-    text-align: center;
 
-    display: none;
+        @keyframes floating {
 
-    animation:
-        pageIn
-        .5s
-        ease;
-}
+            0% {
 
-.card.active {
-    display: block;
-}
+                transform:
+                    translateY(0)
+                    rotate(0deg);
 
+            }
 
-@keyframes pageIn {
 
-    from {
+            50% {
 
-        opacity: 0;
+                transform:
+                    translateY(-15px)
+                    rotate(20deg);
 
-        transform:
-            translateY(25px)
-            scale(.95);
-    }
+            }
 
-    to {
 
-        opacity: 1;
+            100% {
 
-        transform:
-            translateY(0)
-            scale(1);
-    }
-}
+                transform:
+                    translateY(0)
+                    rotate(0deg);
 
+            }
 
-/* =========================
-   ICON
-========================= */
+        }
 
-.main-icon {
 
-    font-size: 68px;
+        .app {
 
-    margin-bottom: 15px;
+            width: 100%;
 
-    line-height: 1.2;
+            max-width: 540px;
 
-    animation:
-        bounce
-        2s
-        ease-in-out
-        infinite;
-}
+        }
 
 
-@keyframes bounce {
+        .card {
 
-    0%,
-    100% {
-        transform:
-            translateY(0);
-    }
+            width: 100%;
 
-    50% {
-        transform:
-            translateY(-8px);
-    }
-}
+            padding: 32px 40px;
 
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.92
+                );
 
-/* =========================
-   TEXT
-========================= */
+            border-radius: 20px;
 
-h1 {
+            box-shadow:
+                0 25px 60px
+                rgba(
+                    90,
+                    50,
+                    90,
+                    0.18
+                );
 
-    color: #733d55;
+            text-align: center;
 
-    font-size: 28px;
+            display: none;
 
-    line-height: 1.35;
+            animation:
+                pageIn
+                0.6s
+                ease;
 
-    margin-bottom: 14px;
-}
+        }
 
-p {
 
-    color: #806271;
+        .card.active {
 
-    font-size: 16px;
+            display: block;
 
-    line-height: 1.6;
-}
+        }
 
 
-/* =========================
-   BUTTON GROUP
-========================= */
+        @keyframes pageIn {
 
-.button-group {
+            from {
 
-    display: flex;
+                opacity: 0;
 
-    justify-content: center;
+                transform:
+                    translateY(25px)
+                    scale(0.92);
 
-    align-items: center;
+            }
 
-    gap: 15px;
 
-    margin-top: 28px;
-}
+            to {
 
+                opacity: 1;
 
-.yes-btn,
-.no-btn {
+                transform:
+                    translateY(0)
+                    scale(1);
 
-    min-width: 120px;
+            }
 
-    padding:
-        13px
-        25px;
+        }
 
-    border: none;
 
-    border-radius: 30px;
+        .main-icon {
 
-    color: white;
+            font-size: 68px;
 
-    font-family:
-        Georgia,
-        serif;
+            margin-bottom: 16px;
 
-    font-size: 16px;
+            animation:
+                bounce
+                2s
+                ease-in-out
+                infinite;
 
-    cursor: pointer;
+        }
 
-    transition:
-        .3s ease;
-}
 
+        @keyframes bounce {
 
-.yes-btn {
-    background: #df86a8;
-}
+            0%,
+            100% {
 
-.no-btn {
-    background: #9d6cc3;
-}
+                transform:
+                    translateY(0);
 
+            }
 
-.yes-btn:hover,
-.no-btn:hover {
 
-    transform:
-        scale(1.08);
-}
+            50% {
 
+                transform:
+                    translateY(-9px);
 
-/* =========================
-   DESTINATION GRID
-========================= */
+            }
 
-.destination-grid {
+        }
 
-    display: grid;
 
-    grid-template-columns:
-        repeat(
-            2,
-            minmax(
-                0,
-                1fr
-            )
-        );
+        h1 {
 
-    gap: 12px;
+            color: #733d55;
 
-    margin-top: 22px;
-}
+            font-size: 27px;
 
+            line-height: 1.35;
 
-.destination {
+            margin-bottom: 14px;
 
-    width: 100%;
+        }
 
-    min-height: 150px;
 
-    padding: 0;
+        p {
 
-    overflow: hidden;
+            color: #806271;
 
-    border: none;
+            font-size: 16px;
 
-    border-radius: 14px;
+            line-height: 1.6;
 
-    background: #f5e5ed;
+        }
 
-    color: #704457;
 
-    font-family:
-        Georgia,
-        serif;
+        button {
 
-    font-size: 14px;
+            border: none;
 
-    cursor: pointer;
+            cursor: pointer;
 
-    transition:
-        .3s ease;
-}
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
+            transition:
+                all
+                0.3s
+                ease;
 
-.destination img {
+        }
 
-    width: 100%;
 
-    height: 95px;
+        /* NAME BOX */
 
-    display: block;
+        .name-box {
 
-    object-fit: cover;
-}
+            margin-top: 22px;
 
+            text-align: left;
 
-.destination span {
+        }
 
-    display: block;
 
-    padding: 10px 5px;
+        .name-box label {
 
-    font-size: 14px;
-}
+            display: block;
 
+            margin-bottom: 7px;
 
-.destination:hover {
+            color: #704457;
 
-    transform:
-        translateY(-4px);
+            font-size: 14px;
 
-    background: #e39ab5;
+            font-weight: bold;
 
-    color: white;
-}
+        }
 
 
-.destination.selected {
+        .name-box input {
 
-    background: #df86a8;
+            width: 100%;
 
-    color: white;
+            height: 42px;
 
-    box-shadow:
-        0 6px 15px
-        rgba(
-            200,
-            100,
-            140,
-            .3
-        );
-}
+            padding: 0 12px;
 
+            border:
+                1px
+                solid
+                #cdbbc5;
 
-/* =========================
-   AMOUNT BOX
-========================= */
+            border-radius: 8px;
 
-.amount-card {
+            outline: none;
 
-    margin-top: 16px;
+            color: #704457;
 
-    padding:
-        14px
-        16px;
+            background: white;
 
-    border:
-        1px
-        dashed
-        #df86a8;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-    border-radius: 15px;
+        }
 
-    background: #fff1f6;
-}
 
+        .name-box input:focus {
 
-.amount-label {
+            border-color: #df86a8;
 
-    color: #8b6272;
+            box-shadow:
+                0 0 0 3px
+                rgba(
+                    223,
+                    134,
+                    168,
+                    0.15
+                );
 
-    font-size: 13px;
-}
+        }
 
 
-.amount {
+        /* BUTTON GROUP */
 
-    margin-top: 3px;
+        .button-group {
 
-    color: #d56d96;
+            display: flex;
 
-    font-size: 32px;
+            justify-content: center;
 
-    font-weight: bold;
-}
+            align-items: center;
 
+            gap: 15px;
 
-.cost-message {
+            margin-top: 28px;
 
-    margin-top: 6px;
+        }
 
-    color: #8b6272;
 
-    font-size: 12px;
+        .yes-btn,
+        .no-btn {
 
-    line-height: 1.5;
-}
+            padding:
+                12px
+                30px;
 
+            border-radius: 30px;
 
-/* =========================
-   MAIN BUTTON
-========================= */
+            color: white;
 
-.main-btn {
+            font-size: 15px;
 
-    width: 100%;
+        }
 
-    height: 46px;
 
-    margin-top: 18px;
+        .yes-btn {
 
-    border: none;
+            background: #df86a8;
 
-    border-radius: 30px;
+        }
 
-    background: #df86a8;
 
-    color: white;
+        .no-btn {
 
-    font-family:
-        Georgia,
-        serif;
+            background: #9d6cc3;
 
-    font-size: 16px;
+        }
 
-    cursor: pointer;
 
-    transition:
-        .3s ease;
-}
+        .yes-btn:hover,
+        .no-btn:hover {
 
+            transform:
+                scale(1.08);
 
-.main-btn:hover {
+        }
 
-    background: #ce7195;
 
-    transform:
-        translateY(-2px);
-}
+        /* DESTINATION GRID */
 
+        .destination-grid {
 
-/* =========================
-   FORM
-========================= */
+            display: grid;
 
-.form-group {
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(
+                        0,
+                        1fr
+                    )
+                );
 
-    text-align: left;
+            gap: 12px;
 
-    margin-top: 20px;
-}
+            margin-top: 22px;
 
+        }
 
-label {
 
-    display: block;
+        .destination {
 
-    margin-bottom: 8px;
+            min-height: 150px;
 
-    color: #704457;
+            padding: 0;
 
-    font-size: 16px;
+            overflow: hidden;
 
-    font-weight: bold;
-}
+            border-radius: 14px;
 
+            background: #f5e5ed;
 
-input,
-select {
+            color: #704457;
 
-    width: 100%;
+            font-size: 14px;
 
-    height: 48px;
+        }
 
-    padding:
-        0
-        14px;
 
-    border:
-        1px
-        solid
-        #cdbbc5;
+        .destination img {
 
-    border-radius: 10px;
+            width: 100%;
 
-    outline: none;
+            height: 95px;
 
-    background: white;
+            display: block;
 
-    color: #704457;
+            object-fit: cover;
 
-    font-family:
-        Georgia,
-        serif;
+        }
 
-    font-size: 16px;
-}
 
+        .destination span {
 
-input:focus,
-select:focus {
+            display: block;
 
-    border-color: #df86a8;
-}
+            padding: 10px 5px;
 
+            font-size: 14px;
 
-/* =========================
-   FINAL PAGE
-========================= */
+        }
 
-.success-icon {
 
-    font-size: 72px;
+        .destination:hover {
 
-    margin-bottom: 15px;
+            background: #e39ab5;
 
-    animation:
-        heartBeat
-        1.5s
-        infinite;
-}
+            color: white;
 
+            transform:
+                translateY(-3px);
 
-@keyframes heartBeat {
+        }
 
-    0%,
-    100% {
-        transform:
-            scale(1);
-    }
 
-    50% {
-        transform:
-            scale(1.12);
-    }
-}
+        .destination.selected {
 
+            background: #df86a8;
 
-.summary {
+            color: white;
 
-    margin-top: 20px;
+            box-shadow:
+                0 6px 15px
+                rgba(
+                    200,
+                    100,
+                    140,
+                    0.25
+                );
 
-    padding: 18px;
+        }
 
-    border-radius: 15px;
 
-    background: #f8e9ef;
+        /* AMOUNT CARD */
 
-    color: #704457;
+        .amount-card {
 
-    line-height: 2;
+            margin-top: 16px;
 
-    text-align: left;
-}
+            padding: 14px 16px;
 
+            border-radius: 15px;
 
-.summary strong {
+            background: #fff1f6;
 
-    color: #9b5575;
-}
+            border:
+                1px
+                dashed
+                #df86a8;
 
+        }
 
-.restart-btn {
 
-    width: 100%;
+        .amount-label {
 
-    height: 45px;
+            font-size: 13px;
 
-    margin-top: 22px;
+            color: #8b6272;
 
-    border: none;
+        }
 
-    border-radius: 25px;
 
-    background: #df86a8;
+        .amount {
 
-    color: white;
+            margin-top: 2px;
 
-    font-family:
-        Georgia,
-        serif;
+            font-size: 32px;
 
-    font-size: 16px;
+            font-weight: bold;
 
-    cursor: pointer;
-}
+            color: #d56d96;
 
+        }
 
-/* =================================================
-   MOBILE RESPONSIVE
-================================================= */
 
-@media (max-width: 600px) {
+        .cost-message {
 
-    body {
+            margin-top: 6px;
 
-        /*
-        এখানে flex center ব্যবহার করা হয়নি।
-        তাই mobile browser-এর address bar
-        card-কে উপরে ঠেলে দেবে না।
-        */
+            font-size: 12px;
 
-        min-height: 100vh;
-    }
+            line-height: 1.5;
 
+            color: #8b6272;
 
-    .app {
+        }
 
-        width: 100%;
 
-        min-height: 100vh;
+        /* MAIN BUTTON */
 
-        padding:
-            70px
-            12px
-            50px;
+        .main-btn {
 
-        display: block;
-    }
+            width: 100%;
 
+            height: 44px;
 
-    .card {
+            margin-top: 16px;
 
-        width: 100%;
+            border-radius: 30px;
 
-        padding:
-            28px
-            18px;
+            background: #df86a8;
 
-        margin:
-            0
-            auto;
+            color: white;
 
-        /*
-        ছোট screen হলে
-        card-এর ভেতরে scroll হবে
-        */
+            font-size: 15px;
 
-        max-height:
-            calc(
-                100vh
-                -
-                100px
-            );
+        }
 
-        overflow-y: auto;
-    }
 
+        .main-btn:hover {
 
-    .main-icon {
+            background: #ce7195;
 
-        font-size: 54px;
+            transform:
+                translateY(-2px);
 
-        margin-bottom: 12px;
-    }
+        }
 
 
-    h1 {
+        /* FORM */
 
-        font-size: 23px;
+        .form-group {
 
-        line-height: 1.35;
-    }
+            text-align: left;
 
+            margin-top: 18px;
 
-    p {
+        }
 
-        font-size: 15px;
-    }
 
+        label {
 
-    .button-group {
+            display: block;
 
-        gap: 10px;
-    }
+            margin-bottom: 7px;
 
+            color: #704457;
 
-    .yes-btn,
-    .no-btn {
+            font-size: 14px;
 
-        min-width: 110px;
+            font-weight: bold;
 
-        padding:
-            12px
-            20px;
+        }
 
-        font-size: 15px;
-    }
 
+        input,
+        select {
 
-    .destination-grid {
+            width: 100%;
 
-        gap: 9px;
-    }
+            height: 42px;
 
+            padding:
+                0
+                12px;
 
-    .destination {
+            border:
+                1px
+                solid
+                #cdbbc5;
 
-        min-height: 140px;
-    }
+            border-radius: 8px;
 
+            outline: none;
 
-    .destination img {
+            color: #704457;
 
-        height: 85px;
-    }
+            background: white;
 
+            font-family:
+                Georgia,
+                serif;
 
-    .destination span {
+        }
 
-        font-size: 13px;
-    }
 
+        input:focus,
+        select:focus {
 
-    .amount {
+            border-color: #df86a8;
 
-        font-size: 30px;
-    }
+        }
 
 
-    .cost-message {
+        /* FINAL PAGE */
 
-        font-size: 11px;
-    }
-}
+        .success-icon {
 
+            font-size: 75px;
 
-/* =================================================
-   SMALL PHONE
-================================================= */
+            margin-bottom: 15px;
 
-@media (max-width: 380px) {
+            animation:
+                heartBeat
+                1.5s
+                infinite;
 
-    .app {
+        }
 
-        padding:
-            55px
-            10px
-            40px;
-    }
 
+        @keyframes heartBeat {
 
-    .card {
+            0%,
+            100% {
 
-        padding:
-            24px
-            14px;
-    }
+                transform:
+                    scale(1);
 
+            }
 
-    .main-icon {
 
-        font-size: 48px;
-    }
+            50% {
 
+                transform:
+                    scale(1.15);
 
-    h1 {
+            }
 
-        font-size: 21px;
-    }
+        }
 
 
-    p {
+        .welcome-name {
 
-        font-size: 14px;
-    }
+            margin-top: 10px;
 
+            color: #9b5575;
 
-    .destination-grid {
+            font-size: 17px;
 
-        grid-template-columns: 1fr;
-    }
+        }
 
 
-    .button-group {
+        .summary {
 
-        gap: 8px;
-    }
+            margin-top: 20px;
 
+            padding: 18px;
 
-    .yes-btn,
-    .no-btn {
+            border-radius: 15px;
 
-        min-width: 100px;
+            background: #f8e9ef;
 
-        padding:
-            11px
-            15px;
-    }
-}
+            color: #704457;
 
-</style>
+            line-height: 2;
+
+            text-align: left;
+
+        }
+
+
+        .summary strong {
+
+            color: #9b5575;
+
+        }
+
+
+        .restart-btn {
+
+            width: 100%;
+
+            height: 43px;
+
+            margin-top: 22px;
+
+            border-radius: 25px;
+
+            background: #df86a8;
+
+            color: white;
+
+            font-size: 15px;
+
+        }
+
+
+        .restart-btn:hover {
+
+            background: #ce7195;
+
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                align-items: flex-start;
+
+                padding:
+                    20px
+                    12px;
+
+            }
+
+
+            .card {
+
+                padding:
+                    25px
+                    18px;
+
+            }
+
+
+            .main-icon {
+
+                font-size: 55px;
+
+                margin-bottom: 12px;
+
+            }
+
+
+            h1 {
+
+                font-size: 22px;
+
+            }
+
+
+            p {
+
+                font-size: 14px;
+
+            }
+
+
+            .destination-grid {
+
+                gap: 9px;
+
+            }
+
+
+            .destination {
+
+                min-height: 140px;
+
+            }
+
+
+            .destination img {
+
+                height: 85px;
+
+            }
+
+
+            .destination span {
+
+                font-size: 13px;
+
+            }
+
+
+            .amount {
+
+                font-size: 30px;
+
+            }
+
+
+            .cost-message {
+
+                font-size: 11px;
+
+            }
+
+        }
+
+
+        @media (max-width: 380px) {
+
+            .destination-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .button-group {
+
+                gap: 10px;
+
+            }
+
+
+            .yes-btn,
+            .no-btn {
+
+                padding:
+                    11px
+                    22px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
 
-<!-- FLOATING FLOWERS -->
+    <div class="flower flower1">
 
-<div class="flower flower1">🌸</div>
-
-<div class="flower flower2">🌼</div>
-
-<div class="flower flower3">🌷</div>
-
-<div class="flower flower4">🌸</div>
-
-
-<main class="app">
-
-
-<!-- =========================
-     PAGE 1
-========================= -->
-
-<section
-    class="card page active"
-    id="page1">
-
-
-    <div class="main-icon">
-        👻🧳🚌🌸
-    </div>
-
-
-    <h1>
-
-        🌸 Are you ready for a trip
-
-        <br>
-
-        with us? 🌸
-
-    </h1>
-
-
-    <p>
-
-        Let's make some unforgettable
-
-        memories together! 🥰
-
-    </p>
-
-
-    <div class="button-group">
-
-
-        <button
-            class="yes-btn"
-            onclick="showPage(2)">
-
-            YES! 💗
-
-        </button>
-
-
-        <button
-            class="no-btn"
-            id="noButton">
-
-            NO 😭
-
-        </button>
-
+        🌸
 
     </div>
 
 
-</section>
+    <div class="flower flower2">
 
-
-<!-- =========================
-     PAGE 2
-========================= -->
-
-<section
-    class="card page"
-    id="page2">
-
-
-    <div class="main-icon">
-        🗺️🌍
-    </div>
-
-
-    <h1>
-        Where should we go?
-    </h1>
-
-
-    <p>
-        Choose our next adventure ✨
-    </p>
-
-
-    <div class="destination-grid">
-
-
-        <button
-            class="destination"
-            onclick="
-                selectDestination(
-                    this,
-                    'Jinda Park',
-                    500
-                )
-            ">
-
-
-            <img
-                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80"
-                alt="Jinda Park">
-
-
-            <span>
-                🌳 Jinda Park
-            </span>
-
-
-        </button>
-
-
-        <button
-            class="destination"
-            onclick="
-                selectDestination(
-                    this,
-                    'Botanical Garden',
-                    500
-                )
-            ">
-
-
-            <img
-                src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80"
-                alt="Botanical Garden">
-
-
-            <span>
-                🌿 Botanical Garden
-            </span>
-
-
-        </button>
-
-
-        <button
-            class="destination"
-            onclick="
-                selectDestination(
-                    this,
-                    'Ramna Park',
-                    500
-                )
-            ">
-
-
-            <img
-                src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=600&q=80"
-                alt="Ramna Park">
-
-
-            <span>
-                🌸 Ramna Park
-            </span>
-
-
-        </button>
-
-
-        <button
-            class="destination"
-            onclick="
-                selectDestination(
-                    this,
-                    'Hatir Jheel',
-                    500
-                )
-            ">
-
-
-            <img
-                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
-                alt="Hatir Jheel">
-
-
-            <span>
-                🌃 Hatir Jheel
-            </span>
-
-
-        </button>
-
-
-        <button
-            class="destination"
-            onclick="
-                selectDestination(
-                    this,
-                    'Sahabuddin Park',
-                    500
-                )
-            ">
-
-
-            <img
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
-                alt="Sahabuddin Park">
-
-
-            <span>
-                🌳 Sahabuddin Park
-            </span>
-
-
-        </button>
-
+        🌼
 
     </div>
 
 
-    <div
-        class="amount-card"
-        id="amountCard"
-        style="display:none;">
+    <div class="flower flower3">
 
-
-        <div class="amount-label">
-
-            Estimated trip cost 💰
-
-        </div>
-
-
-        <div
-            class="amount"
-            id="destinationAmount">
-
-            ৳0
-
-        </div>
-
-
-        <p class="cost-message">
-
-            This is the estimated cost for our trip.
-
-            <br>
-
-            So please bring around this amount with you! 🥰✨
-
-        </p>
-
+        🌷
 
     </div>
 
 
-    <button
-        class="main-btn"
-        onclick="goToDatePage()">
+    <div class="flower flower4">
 
-        Continue →
-
-    </button>
-
-
-</section>
-
-
-<!-- =========================
-     PAGE 3
-========================= -->
-
-<section
-    class="card page"
-    id="page3">
-
-
-    <div class="main-icon">
-        📅⏰
-    </div>
-
-
-    <h1>
-        When are we going?
-    </h1>
-
-
-    <p>
-        Pick a date and time for our adventure ✨
-    </p>
-
-
-    <div class="form-group">
-
-
-        <label>
-            Pick a date 📅
-        </label>
-
-
-        <input
-            type="date"
-            id="dateInput">
-
+        🌸
 
     </div>
 
 
-    <div class="form-group">
+    <main class="app">
 
 
-        <label>
-            Choose a time ⏰
-        </label>
+        <!-- PAGE 1 -->
 
+        <section
+            class="card page active"
+            id="page1">
 
-        <select
-            id="timeInput">
 
+            <div class="main-icon">
 
-            <option value="">
-                Select a time
-            </option>
+                👻🧳🚌🌸
 
+            </div>
 
-            <option>
-                7:00 AM
-            </option>
 
+            <h1>
 
-            <option>
-                8:00 AM
-            </option>
+                🌸 Are you ready for a trip
 
+                <br>
 
-            <option>
-                9:00 AM
-            </option>
+                with us? 🌸
 
+            </h1>
 
-            <option>
-                10:00 AM
-            </option>
 
+            <p>
 
-            <option>
-                11:00 AM
-            </option>
+                Let's make some unforgettable
 
+                memories together! 🥰
 
-            <option>
-                12:00 PM
-            </option>
+            </p>
 
 
-            <option>
-                2:00 PM
-            </option>
+            <div class="name-box">
 
+                <label
+                    for="nameInput">
 
-            <option>
-                4:00 PM
-            </option>
+                    Your name please 🌸
 
+                </label>
 
-            <option>
-                5:00 PM
-            </option>
 
+                <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="Enter your name...">
 
-            <option>
-                6:00 PM
-            </option>
+            </div>
 
 
-            <option>
-                7:00 PM
-            </option>
+            <div class="button-group">
 
 
-        </select>
+                <button
+                    class="yes-btn"
+                    onclick="startTrip()">
 
+                    YES! 💗
 
-    </div>
+                </button>
 
 
-    <button
-        class="main-btn"
-        onclick="confirmDate()">
+                <button
+                    class="no-btn"
+                    id="noButton">
 
-        Continue 💗
+                    NO 😭
 
-    </button>
+                </button>
 
 
-</section>
+            </div>
 
 
-<!-- =========================
-     PAGE 4
-========================= -->
+        </section>
 
-<section
-    class="card page"
-    id="page4">
 
+        <!-- PAGE 2 -->
 
-    <div class="success-icon">
-        🎉🚌🎉
-    </div>
+        <section
+            class="card page"
+            id="page2">
 
 
-    <h1>
-        TRIP CONFIRMED! 💗
-    </h1>
+            <div class="main-icon">
 
+                🗺️🌍
 
-    <p>
+            </div>
 
-        Let's make unforgettable memories together! 🥰✨
 
-    </p>
+            <h1>
 
+                Where should we go?
 
-    <div class="summary">
+            </h1>
 
 
-        📍 Destination:
+            <p>
 
-        <strong
-            id="finalDestination">
+                Choose our next adventure ✨
 
-        </strong>
+            </p>
 
 
-        <br>
+            <div class="destination-grid">
 
 
-        📅 Date:
+                <button
+                    class="destination"
+                    onclick="selectDestination(
+                        this,
+                        'Jinda Park',
+                        500
+                    )">
 
-        <strong
-            id="finalDate">
 
-        </strong>
+                    <img
+                        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80"
+                        alt="Jinda Park">
 
 
-        <br>
+                    <span>
 
+                        🌳 Jinda Park
 
-        ⏰ Time:
+                    </span>
 
-        <strong
-            id="finalTime">
 
-        </strong>
+                </button>
 
 
-        <br>
+                <button
+                    class="destination"
+                    onclick="selectDestination(
+                        this,
+                        'Botanical Garden',
+                        500
+                    )">
 
 
-        💰 Estimated Cost:
+                    <img
+                        src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80"
+                        alt="Botanical Garden">
 
-        <strong
-            id="finalAmount">
 
-        </strong>
+                    <span>
 
+                        🌿 Botanical Garden
 
-        <br>
+                    </span>
 
 
-        🎒 Remember to bring around this amount with you!
+                </button>
 
 
-    </div>
+                <button
+                    class="destination"
+                    onclick="selectDestination(
+                        this,
+                        'Ramna Park',
+                        500
+                    )">
 
 
-    <button
-        class="restart-btn"
-        onclick="location.reload()">
+                    <img
+                        src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=600&q=80"
+                        alt="Ramna Park">
 
-        Plan Another Trip 🔄
 
-    </button>
+                    <span>
 
+                        🌸 Ramna Park
 
-</section>
+                    </span>
 
 
-</main>
+                </button>
 
 
-<script>
+                <button
+                    class="destination"
+                    onclick="selectDestination(
+                        this,
+                        'Hatir Jheel',
+                        500
+                    )">
 
 
-/* =========================
-   VARIABLES
-========================= */
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
+                        alt="Hatir Jheel">
 
-let selectedDestination = "";
 
-let selectedAmount = 0;
+                    <span>
 
-let selectedDate = "";
+                        🌃 Hatir Jheel
 
-let selectedTime = "";
+                    </span>
 
 
-/* =========================
-   PAGE CHANGE
-========================= */
+                </button>
 
-function showPage(pageNumber) {
 
+                <button
+                    class="destination"
+                    onclick="selectDestination(
+                        this,
+                        'Sahabuddin Park',
+                        500
+                    )">
 
-    const pages =
-        document.querySelectorAll(
-            ".page"
-        );
 
+                    <img
+                        src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
+                        alt="Sahabuddin Park">
 
-    pages.forEach(
-        function(page) {
 
-            page.classList.remove(
-                "active"
+                    <span>
+
+                        🌳 Sahabuddin Park
+
+                    </span>
+
+
+                </button>
+
+
+            </div>
+
+
+            <div
+                class="amount-card"
+                id="amountCard"
+                style="display: none;">
+
+
+                <div
+                    class="amount-label">
+
+                    Estimated trip cost 💰
+
+                </div>
+
+
+                <div
+                    class="amount"
+                    id="destinationAmount">
+
+                    ৳0
+
+                </div>
+
+
+                <p
+                    class="cost-message">
+
+                    This is the estimated cost
+
+                    for our trip.
+
+                    <br>
+
+                    So please bring around this
+
+                    amount with you! 🥰✨
+
+                </p>
+
+
+            </div>
+
+
+            <button
+                class="main-btn"
+                onclick="goToDatePage()">
+
+                Continue →
+
+            </button>
+
+
+        </section>
+
+
+        <!-- PAGE 3 -->
+
+        <section
+            class="card page"
+            id="page3">
+
+
+            <div class="main-icon">
+
+                📅⏰
+
+            </div>
+
+
+            <h1>
+
+                When are we going?
+
+            </h1>
+
+
+            <p>
+
+                Pick a date and time for our
+
+                adventure ✨
+
+            </p>
+
+
+            <div
+                class="form-group">
+
+
+                <label>
+
+                    Pick a date 📅
+
+                </label>
+
+
+                <input
+                    type="date"
+                    id="dateInput">
+
+            </div>
+
+
+            <div
+                class="form-group">
+
+
+                <label>
+
+                    Choose a time ⏰
+
+                </label>
+
+
+                <select
+                    id="timeInput">
+
+
+                    <option
+                        value="">
+
+                        Select a time
+
+                    </option>
+
+
+                    <option>
+
+                        7:00 AM
+
+                    </option>
+
+
+                    <option>
+
+                        8:00 AM
+
+                    </option>
+
+
+                    <option>
+
+                        9:00 AM
+
+                    </option>
+
+
+                    <option>
+
+                        10:00 AM
+
+                    </option>
+
+
+                    <option>
+
+                        11:00 AM
+
+                    </option>
+
+
+                    <option>
+
+                        12:00 PM
+
+                    </option>
+
+
+                    <option>
+
+                        2:00 PM
+
+                    </option>
+
+
+                    <option>
+
+                        4:00 PM
+
+                    </option>
+
+
+                    <option>
+
+                        5:00 PM
+
+                    </option>
+
+
+                    <option>
+
+                        6:00 PM
+
+                    </option>
+
+
+                    <option>
+
+                        7:00 PM
+
+                    </option>
+
+
+                </select>
+
+            </div>
+
+
+            <button
+                class="main-btn"
+                onclick="confirmDate()">
+
+                Continue 💗
+
+            </button>
+
+
+        </section>
+
+
+        <!-- PAGE 4 -->
+
+        <section
+            class="card page"
+            id="page4">
+
+
+            <div
+                class="success-icon">
+
+                🎉🚌🎉
+
+            </div>
+
+
+            <h1>
+
+                TRIP CONFIRMED! 💗
+
+            </h1>
+
+
+            <p
+                class="welcome-name">
+
+                Hey
+
+                <strong
+                    id="finalName">
+
+                </strong>
+
+                ! 🥰
+
+            </p>
+
+
+            <p>
+
+                Let's make unforgettable memories
+
+                together! 🥰✨
+
+            </p>
+
+
+            <div
+                class="summary">
+
+
+                📍 Destination:
+
+                <strong
+                    id="finalDestination">
+
+                </strong>
+
+
+                <br>
+
+
+                📅 Date:
+
+                <strong
+                    id="finalDate">
+
+                </strong>
+
+
+                <br>
+
+
+                ⏰ Time:
+
+                <strong
+                    id="finalTime">
+
+                </strong>
+
+
+                <br>
+
+
+                💰 Estimated Cost:
+
+                <strong
+                    id="finalAmount">
+
+                </strong>
+
+
+                <br>
+
+
+                🎒 Remember to bring around this
+
+                amount with you!
+
+
+            </div>
+
+
+            <button
+                class="restart-btn"
+                onclick="location.reload()">
+
+                Plan Another Trip 🔄
+
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+
+        /*
+        ==========================================
+        GOOGLE APPS SCRIPT URL
+        ==========================================
+        */
+
+        const GOOGLE_SCRIPT_URL =
+            "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+
+
+        let userName = "";
+
+        let selectedDestination = "";
+
+        let selectedAmount = 0;
+
+        let selectedDate = "";
+
+        let selectedTime = "";
+
+
+        /*
+        ==========================================
+        SHOW PAGE
+        ==========================================
+        */
+
+        function showPage(
+            pageNumber
+        ) {
+
+
+            const pages =
+                document.querySelectorAll(
+                    ".page"
+                );
+
+
+            pages.forEach(
+                function(page) {
+
+                    page.classList.remove(
+                        "active"
+                    );
+
+                }
             );
+
+
+            document
+                .getElementById(
+                    "page" + pageNumber
+                )
+                .classList.add(
+                    "active"
+                );
 
         }
-    );
 
 
-    document
-        .getElementById(
-            "page" + pageNumber
-        )
-        .classList.add(
-            "active"
-        );
+        /*
+        ==========================================
+        START TRIP
+        ==========================================
+        */
+
+        function startTrip() {
 
 
-    /*
-    নতুন page দেখানোর সময়
-    card-এর top position
-    আবার ঠিক রাখা
-    */
-
-    window.scrollTo(
-        0,
-        0
-    );
-
-}
+            const nameInput =
+                document.getElementById(
+                    "nameInput"
+                );
 
 
-/* =========================
-   NO BUTTON
-========================= */
-
-const noButton =
-    document.getElementById(
-        "noButton"
-    );
+            if (
+                nameInput.value.trim()
+                ===
+                ""
+            ) {
 
 
-noButton.addEventListener(
-    "mouseover",
-    function() {
+                alert(
+                    "Please enter your name first 🌸"
+                );
 
 
-        const maxX =
-            window.innerWidth
-            -
-            noButton.offsetWidth
-            -
-            20;
+                nameInput.focus();
 
 
-        const maxY =
-            window.innerHeight
-            -
-            noButton.offsetHeight
-            -
-            20;
+                return;
+
+            }
 
 
-        const randomX =
-            Math.random()
-            *
-            Math.max(
-                100,
-                maxX
+            userName =
+                nameInput.value.trim();
+
+
+            showPage(2);
+
+        }
+
+
+        /*
+        ==========================================
+        NO BUTTON
+        ==========================================
+        */
+
+        const noButton =
+            document.getElementById(
+                "noButton"
             );
 
 
-        const randomY =
-            Math.random()
-            *
-            Math.max(
-                100,
-                maxY
-            );
+        noButton.addEventListener(
+
+            "mouseover",
+
+            function() {
 
 
-        noButton.style.position =
-            "fixed";
+                const maxX =
+                    window.innerWidth
+                    -
+                    noButton.offsetWidth
+                    -
+                    20;
 
 
-        noButton.style.left =
-            randomX + "px";
+                const maxY =
+                    window.innerHeight
+                    -
+                    noButton.offsetHeight
+                    -
+                    20;
 
 
-        noButton.style.top =
-            randomY + "px";
-
-    }
-);
-
-
-/* =========================
-   DESTINATION SELECT
-========================= */
-
-function selectDestination(
-    button,
-    destination,
-    amount
-) {
+                const randomX =
+                    Math.random()
+                    *
+                    Math.max(
+                        100,
+                        maxX
+                    );
 
 
-    const buttons =
-        document.querySelectorAll(
-            ".destination"
+                const randomY =
+                    Math.random()
+                    *
+                    Math.max(
+                        100,
+                        maxY
+                    );
+
+
+                noButton.style.position =
+                    "fixed";
+
+
+                noButton.style.left =
+                    randomX
+                    +
+                    "px";
+
+
+                noButton.style.top =
+                    randomY
+                    +
+                    "px";
+
+            }
+
         );
 
 
-    buttons.forEach(
-        function(btn) {
+        /*
+        ==========================================
+        SELECT DESTINATION
+        ==========================================
+        */
 
-            btn.classList.remove(
+        function selectDestination(
+
+            button,
+
+            destination,
+
+            amount
+
+        ) {
+
+
+            const buttons =
+                document.querySelectorAll(
+                    ".destination"
+                );
+
+
+            buttons.forEach(
+                function(btn) {
+
+                    btn.classList.remove(
+                        "selected"
+                    );
+
+                }
+            );
+
+
+            button.classList.add(
                 "selected"
             );
 
+
+            selectedDestination =
+                destination;
+
+
+            selectedAmount =
+                amount;
+
+
+            document
+                .getElementById(
+                    "destinationAmount"
+                )
+                .innerText =
+                "৳"
+                +
+                amount;
+
+
+            document
+                .getElementById(
+                    "amountCard"
+                )
+                .style.display =
+                "block";
+
         }
-    );
 
 
-    button.classList.add(
-        "selected"
-    );
+        /*
+        ==========================================
+        GO TO DATE PAGE
+        ==========================================
+        */
+
+        function goToDatePage() {
 
 
-    selectedDestination =
-        destination;
+            if (
+
+                selectedDestination
+                ===
+                ""
+
+            ) {
 
 
-    selectedAmount =
-        amount;
+                alert(
+
+                    "Please select a destination first 🗺️"
+
+                );
 
 
-    document
-        .getElementById(
-            "destinationAmount"
-        )
-        .innerText =
-        "৳" + amount;
+                return;
 
-
-    document
-        .getElementById(
-            "amountCard"
-        )
-        .style.display =
-        "block";
-
-}
-
-
-/* =========================
-   GO TO DATE PAGE
-========================= */
-
-function goToDatePage() {
-
-
-    if (
-        selectedDestination === ""
-    ) {
-
-
-        alert(
-            "Please select a destination first 🗺️"
-        );
-
-
-        return;
-
-    }
-
-
-    showPage(3);
-
-}
-
-
-/* =========================
-   CONFIRM DATE
-========================= */
-
-function confirmDate() {
-
-
-    const dateInput =
-        document.getElementById(
-            "dateInput"
-        );
-
-
-    const timeInput =
-        document.getElementById(
-            "timeInput"
-        );
-
-
-    if (
-        dateInput.value === ""
-    ) {
-
-
-        alert(
-            "Please select a date 📅"
-        );
-
-
-        return;
-
-    }
-
-
-    if (
-        timeInput.value === ""
-    ) {
-
-
-        alert(
-            "Please select a time ⏰"
-        );
-
-
-        return;
-
-    }
-
-
-    selectedDate =
-        dateInput.value;
-
-
-    selectedTime =
-        timeInput.value;
-
-
-    const dateObject =
-        new Date(
-            selectedDate
-        );
-
-
-    const formattedDate =
-        dateObject.toLocaleDateString(
-            "en-US",
-            {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric"
             }
-        );
 
 
-    document
-        .getElementById(
-            "finalDestination"
-        )
-        .innerText =
-        selectedDestination;
+            showPage(3);
+
+        }
 
 
-    document
-        .getElementById(
-            "finalDate"
-        )
-        .innerText =
-        formattedDate;
+        /*
+        ==========================================
+        CONFIRM DATE
+        ==========================================
+        */
+
+        function confirmDate() {
 
 
-    document
-        .getElementById(
-            "finalTime"
-        )
-        .innerText =
-        selectedTime;
+            const dateInput =
+                document.getElementById(
+                    "dateInput"
+                );
 
 
-    document
-        .getElementById(
-            "finalAmount"
-        )
-        .innerText =
-        "৳" + selectedAmount;
+            const timeInput =
+                document.getElementById(
+                    "timeInput"
+                );
 
 
-    showPage(4);
+            if (
 
-}
+                dateInput.value
+                ===
+                ""
 
-</script>
+            ) {
+
+
+                alert(
+
+                    "Please select a date 📅"
+
+                );
+
+
+                return;
+
+            }
+
+
+            if (
+
+                timeInput.value
+                ===
+                ""
+
+            ) {
+
+
+                alert(
+
+                    "Please select a time ⏰"
+
+                );
+
+
+                return;
+
+            }
+
+
+            selectedDate =
+                dateInput.value;
+
+
+            selectedTime =
+                timeInput.value;
+
+
+            const dateObject =
+                new Date(
+                    selectedDate
+                );
+
+
+            const formattedDate =
+                dateObject.toLocaleDateString(
+
+                    "en-US",
+
+                    {
+
+                        weekday:
+                            "long",
+
+                        year:
+                            "numeric",
+
+                        month:
+                            "long",
+
+                        day:
+                            "numeric"
+
+                    }
+
+                );
+
+
+            document
+                .getElementById(
+                    "finalName"
+                )
+                .innerText =
+                userName;
+
+
+            document
+                .getElementById(
+                    "finalDestination"
+                )
+                .innerText =
+                selectedDestination;
+
+
+            document
+                .getElementById(
+                    "finalDate"
+                )
+                .innerText =
+                formattedDate;
+
+
+            document
+                .getElementById(
+                    "finalTime"
+                )
+                .innerText =
+                selectedTime;
+
+
+            document
+                .getElementById(
+                    "finalAmount"
+                )
+                .innerText =
+                "৳"
+                +
+                selectedAmount;
+
+
+            /*
+            ==========================================
+            SAVE TO GOOGLE SHEET
+            ==========================================
+            */
+
+            fetch(
+
+                GOOGLE_SCRIPT_URL,
+
+                {
+
+                    method:
+                        "POST",
+
+                    mode:
+                        "no-cors",
+
+                    headers:
+
+                        {
+
+                            "Content-Type":
+                                "text/plain;charset=utf-8"
+
+                        },
+
+                    body:
+
+                        JSON.stringify(
+
+                            {
+
+                                name:
+                                    userName,
+
+                                answer:
+                                    "YES ❤️",
+
+                                destination:
+                                    selectedDestination,
+
+                                tripDate:
+                                    selectedDate,
+
+                                tripTime:
+                                    selectedTime,
+
+                                amount:
+                                    "৳"
+                                    +
+                                    selectedAmount
+
+                            }
+
+                        )
+
+                }
+
+            );
+
+
+            showPage(4);
+
+        }
+
+
+    </script>
+
 
 </body>
 
