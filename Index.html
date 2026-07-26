@@ -1354,6 +1354,7 @@
 
     <script>
 
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyn17xpa_hjKOM1IyhrOTPc1kQ0BtXbxMCVwa5_HWyumxThdrzORaYy6X2cbykOfulWXA/exec";
 
         let userName = "";
 
@@ -1619,7 +1620,7 @@
 
         /*
         ============================
-        CONFIRM DATE
+        CONFIRM DATE & SUBMIT TO SHEET
         ============================
         */
 
@@ -1742,6 +1743,23 @@
                 "৳"
                 +
                 selectedAmount;
+
+
+            // Send data to Google Sheets via Apps Script Web App
+            const formData = new URLSearchParams();
+            formData.append("name", userName);
+            formData.append("destination", selectedDestination);
+            formData.append("date", formattedDate);
+            formData.append("time", selectedTime);
+            formData.append("amount", "৳" + selectedAmount);
+
+            fetch(SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                body: formData
+            }).catch(error => {
+                console.error("Error saving data:", error);
+            });
 
 
             showPage(5);
